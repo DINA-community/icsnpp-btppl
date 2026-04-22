@@ -1,0 +1,3 @@
+module BTPPL_GENERATEID;
+
+public function generateId() : string &cxxname="BTPPL_GENERATEID::generateId";

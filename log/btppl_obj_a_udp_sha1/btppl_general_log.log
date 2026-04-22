@@ -1,0 +1,11 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	btppl_general_log
+#open	2025-05-12-12-23-51
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	message_tcp_bl	header_hdr_len	header_flags_type	header_flags_version	header_flags_reserved	header_flags_sha1	header_job_time	header_job_time_ct	header_member	header_o_type	header_method	header_z_nr	header_f_nr	header_path	body_parameters	body_utc	body_sha1	body_fletcher
+#types	time	string	addr	port	addr	port	enum	count	count	string	string	count	string	count	count	count	count	count	count	count	string	string	time	string	string
+1746606569.950278	CcQKRd3jV6q5ncuBK6	192.168.1.1	1234	192.168.1.100	3110	udp	-	17	Telegram type Request	OCIT-Outstations-BTPPL Version 1	0	with Sha1	131	0	0	500	0	0	5	0x01 	(empty)	1746606569.000000	0xb4 0x50 0x17 0x0f 0xf3 0x92 0x72 0x0f 0x8f 0x53 0x32 0xf9 0x9a 0xd7 0xeb 0x88 0x26 0x1d 0x2e 0xf8 	0x2c 0x28 
+1746606569.953111	CcQKRd3jV6q5ncuBK6	192.168.1.1	1234	192.168.1.100	3110	udp	-	16	Telegram type Response	OCIT-Outstations-BTPPL Version 1	0	with Sha1	131	0	0	500	0	0	5	(empty)	0x00 0x00 0x38 0xd0 0xdf 0xa9 0x17 0x06 0x4f 0x62 0x6a 0x41 0x32 0x00 	1746606569.000000	0x8f 0xbd 0xb7 0x2e 0xba 0x4b 0xa4 0x49 0x98 0xa9 0xd7 0xe7 0xed 0x60 0x17 0x02 0x7c 0x1e 0x70 0xce 	0x9e 0x81 
+#close	2025-05-12-12-23-51

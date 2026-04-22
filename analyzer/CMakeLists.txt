@@ -1,0 +1,20 @@
+spicy_add_analyzer(
+    NAME
+    BTPPL
+    PACKAGE_NAME
+    BTPPL
+    SOURCES
+    zeek_btppl.spicy
+    btppl_conversion.spicy
+    btppl_conversion.cc
+    btppl_generateid.spicy
+    btppl_generateid.cc
+    btppl.spicy
+    btppl.evt
+    btppl_enum.spicy
+    SCRIPTS
+    __load__.zeek
+    main.zeek
+    btppl_types.zeek
+    btppl_processing.zeek
+    btppl_enum.zeek)

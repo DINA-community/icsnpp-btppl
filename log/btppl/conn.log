@@ -1,0 +1,17 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2025-05-12-12-23-48
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
+1745932310.809712	CqRMjX2E54MuGjF8rd	192.168.88.239	59801	224.0.1.84	4160	udp	-	-	-	-	S0	T	F	0	D	1	92	0	0	-
+1745932286.767825	CAjkKPrHHf2COP6s4	0.0.0.0	68	255.255.255.255	67	udp	dhcp	27.216616	1800	0	S0	T	T	0	D	6	1968	0	0	-
+1745932301.607380	CLA7OB4OJhZ5J9gY2b	192.168.88.239	58864	192.168.88.255	1947	udp	-	3.944851	840	0	S0	T	T	0	D	21	1428	0	0	-
+1745932268.853755	Cd7WdYy9ZE5lPqJTk	192.168.88.239	51196	255.255.255.255	1947	udp	-	2.016505	440	0	S0	T	T	0	D	11	748	0	0	-
+1745932269.552886	Cj06D5BrivjY8oXwf	172.16.14.199	44387	172.16.14.62	2504	tcp	spicy_btppl_tcp	45.004040	2346	2160	OTH	T	T	0	DdATa	92	7181	46	4564	-
+1745932269.091471	C5yuoh4oihy8ua8bub	172.16.14.62	55691	172.16.14.199	2504	tcp	spicy_btppl_tcp	45.151514	8083	15225	OTH	T	T	0	DdA	227	19887	137	22349	-
+1745932301.607377	CvmRgE1J99lyPD0sy6	192.168.88.239	58865	255.255.255.255	1947	udp	-	3.944857	840	0	S0	T	T	0	D	21	1428	0	0	-
+1745932268.855479	CkMcuZUMJEhx43aB8	192.168.88.239	51197	192.168.88.255	1947	udp	-	2.024268	440	0	S0	T	T	0	D	11	748	0	0	-
+#close	2025-05-12-12-23-48

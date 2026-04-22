@@ -1,0 +1,93 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	telemetry
+#open	2025-05-12-12-23-47
+#fields	ts	peer	metric_type	name	labels	label_values	value
+#types	time	string	string	string	vector[string]	vector[string]	double
+1745932268.853755	zeek	counter	zeek_log_stream_writes_total	module,stream	LoadedScripts,LoadedScripts::LOG	514.0
+1745932268.853755	zeek	counter	zeek_log_stream_writes_total	module,stream	PacketFilter,PacketFilter::LOG	1.0
+1745932268.853755	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,LoadedScripts,loaded_scripts,LoadedScripts::LOG,Log::WRITER_ASCII	514.0
+1745932268.853755	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,PacketFilter,packet_filter,PacketFilter::LOG,Log::WRITER_ASCII	1.0
+1745932268.853755	zeek	counter	zeek_net_received_bytes_total	(empty)	(empty)	82.0
+1745932268.853755	zeek	counter	zeek_net_received_packets_total	(empty)	(empty)	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	Telemetry::log	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	ChecksumOffloading::check	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	Broker::log_flush	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	filter_change_tracking	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	NetControl::init	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	run_sync_hook	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	grab_vulnerable_versions	1.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	zeek_script_loaded	514.0
+1745932268.853755	zeek	counter	zeek_event_handler_invocations_total	name	zeek_init	1.0
+1745932268.853755	zeek	counter	zeek_total_sessions_total	protocol	icmp	0.0
+1745932268.853755	zeek	counter	zeek_total_sessions_total	protocol	udp	1.0
+1745932268.853755	zeek	counter	zeek_total_sessions_total	protocol	tcp	0.0
+1745932268.853755	zeek	gauge	zeek_version_info	beta,commit,debug,major,minor,patch,version_number,version_string	false,0,false,7,0,0,70000,7.0.0	1.0
+1745932268.853755	zeek	gauge	zeek_active_sessions	protocol	icmp	0.0
+1745932268.853755	zeek	gauge	zeek_active_sessions	protocol	udp	1.0
+1745932268.853755	zeek	gauge	zeek_active_sessions	protocol	tcp	0.0
+1745932268.853755	zeek	gauge	process_resident_memory_bytes	(empty)	(empty)	124030976.0
+1745932268.853755	zeek	gauge	process_virtual_memory_bytes	(empty)	(empty)	257482752.0
+1745932268.853755	zeek	gauge	process_cpu_seconds	(empty)	(empty)	0.46
+1745932268.853755	zeek	gauge	process_open_fds	(empty)	(empty)	25.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Conn,Conn::LOG	8.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Notice,Notice::LOG	1.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	BTPPL,BTPPL::LOG_GENERAL_LOG	365.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	CaptureLoss,CaptureLoss::LOG	1.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Analyzer::Logging,Analyzer::Logging::LOG	1.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	DHCP,DHCP::LOG	3.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Stats,Stats::LOG	2.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Known,Known::SERVICES_LOG	2.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	PacketFilter,PacketFilter::LOG	1.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	Telemetry,Telemetry::LOG	26.0
+1745932314.556926	zeek	counter	zeek_log_stream_writes_total	module,stream	LoadedScripts,LoadedScripts::LOG	514.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Known,known_services,Known::SERVICES_LOG,Log::WRITER_ASCII	2.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,CaptureLoss,capture_loss,CaptureLoss::LOG,Log::WRITER_ASCII	1.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Notice,notice,Notice::LOG,Log::WRITER_ASCII	1.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Analyzer::Logging,analyzer,Analyzer::Logging::LOG,Log::WRITER_ASCII	1.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Stats,stats,Stats::LOG,Log::WRITER_ASCII	2.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,LoadedScripts,loaded_scripts,LoadedScripts::LOG,Log::WRITER_ASCII	514.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,BTPPL,btppl_general_log,BTPPL::LOG_GENERAL_LOG,Log::WRITER_ASCII	365.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Telemetry,telemetry,Telemetry::LOG,Log::WRITER_ASCII	26.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,Conn,conn,Conn::LOG,Log::WRITER_ASCII	8.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,DHCP,dhcp,DHCP::LOG,Log::WRITER_ASCII	3.0
+1745932314.556926	zeek	counter	zeek_log_writer_writes_total	filter_name,module,path,stream,writer	default,PacketFilter,packet_filter,PacketFilter::LOG,Log::WRITER_ASCII	1.0
+1745932314.556926	zeek	counter	zeek_net_received_bytes_total	(empty)	(empty)	74330.0
+1745932314.556926	zeek	counter	zeek_net_received_packets_total	(empty)	(empty)	671.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	net_done	1.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	analyzer_violation_info	1.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	known_service_add	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	analyzer_confirmation_info	3.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	SumStats::finish_epoch	6.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	check_stats	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	zeek_script_loaded	514.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	Telemetry::log	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	dhcp_message	6.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	grab_vulnerable_versions	3.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	ChecksumOffloading::check	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	connection_state_remove	8.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	CaptureLoss::take_measurement	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	Broker::log_flush	44.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	service_info_commit	2.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	filter_change_tracking	3.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	new_connection	8.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	NetControl::init	1.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	DHCP::aggregate_msgs	6.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	BTPPL::MessageTcpEvt	365.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	run_sync_hook	6.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	zeek_done	1.0
+1745932314.556926	zeek	counter	zeek_event_handler_invocations_total	name	zeek_init	1.0
+1745932314.556926	zeek	counter	zeek_total_sessions_total	protocol	icmp	0.0
+1745932314.556926	zeek	counter	zeek_total_sessions_total	protocol	udp	6.0
+1745932314.556926	zeek	counter	zeek_total_sessions_total	protocol	tcp	2.0
+1745932314.556926	zeek	gauge	zeek_version_info	beta,commit,debug,major,minor,patch,version_number,version_string	false,0,false,7,0,0,70000,7.0.0	1.0
+1745932314.556926	zeek	gauge	zeek_active_sessions	protocol	icmp	0.0
+1745932314.556926	zeek	gauge	zeek_active_sessions	protocol	udp	6.0
+1745932314.556926	zeek	gauge	zeek_active_sessions	protocol	tcp	2.0
+1745932314.556926	zeek	gauge	process_resident_memory_bytes	(empty)	(empty)	124030976.0
+1745932314.556926	zeek	gauge	process_virtual_memory_bytes	(empty)	(empty)	333017088.0
+1745932314.556926	zeek	gauge	process_cpu_seconds	(empty)	(empty)	0.92
+1745932314.556926	zeek	gauge	process_open_fds	(empty)	(empty)	49.0
+#close	2025-05-12-12-23-48

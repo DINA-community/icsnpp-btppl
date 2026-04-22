@@ -1,0 +1,24 @@
+[package]
+script_dir = scripts
+test_command = cd testing && btest -c btest.cfg
+summary = Basic Transport Packet Protocol Layer (BTPPL)
+description = The Basic Transport Packet Protocol Layer (BTPPL) is standardazied by [OCIT](https://www.ocit.org/en/).
+    BTPPL is used for the OCIT outstations protocol, for the communication of control center and field devices.
+
+    Protocol specification: https://www.ocit.org/en/ocit/downloads/ -> ocit-o_protocol_v3.0_d02.pdf
+depends =
+    zeek >=6.1.0
+build_command = mkdir -p build && cd build && SPICYZ=$(command -v spicyz || echo %(package_base)s/spicy-plugin/build/bin/spicyz) cmake .. && cmake --build .
+
+[template]
+source = https://github.com/zeek/package-template
+version = v3.1.0
+zkg_version = 2.13.0-46
+features = spicy-protocol-analyzer
+
+[template_vars]
+name = spicy-BTPPL
+analyzer = BTPPL
+transport = IP
+unit_orig = MessageTcps
+unit_resp = MessageTcps

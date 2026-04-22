@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	analyzer
+#open	2025-05-12-12-23-48
+#fields	ts	cause	analyzer_kind	analyzer_name	uid	fuid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	failure_reason	failure_data
+#types	time	string	string	string	string	string	addr	port	addr	port	string	string
+1745932310.809712	violation	packet	TEREDO	CqRMjX2E54MuGjF8rd	-	192.168.88.239	59801	224.0.1.84	4160	Truncated Teredo or invalid inner IP version	\x00\x00\x00\x01\x00\x12cfgs.stg.yunex.dev\x00\x00\x10@\x0as\x15V\x0b\xc8H"\x9b7\xb3\xaa
+#close	2025-05-12-12-23-48

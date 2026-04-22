@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	known_services
+#open	2025-05-12-12-23-49
+#fields	ts	host	port_num	port_proto	service
+#types	time	addr	port	enum	set[string]
+1746606569.916809	192.168.1.100	2504	tcp	SPICY_BTPPL_TCP
+#close	2025-05-12-12-23-49

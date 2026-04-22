@@ -1,0 +1,20 @@
+module Zeek_BTPPL;
+
+import BTPPL;
+import spicy;
+
+on BTPPL::MessageTcps::%done {
+    spicy::accept_input();
+}
+
+on BTPPL::MessageTcps::%error {
+    spicy::decline_input("error parsing BTPPL message over TCP");
+}
+
+on BTPPL::MessageUdps::%done {
+    spicy::accept_input();
+}
+
+on BTPPL::MessageUdps::%error {
+    spicy::decline_input("error parsing BTPPL message over UDP");
+}

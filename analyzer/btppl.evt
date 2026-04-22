@@ -1,0 +1,27 @@
+import BTPPL;
+import BTPPL_ENUM;
+import Zeek_BTPPL;
+
+protocol analyzer spicy::BTPPL_TCP over TCP:
+    parse with BTPPL::MessageTcps;
+
+protocol analyzer spicy::BTPPL_UDP over UDP:
+    parse with BTPPL::MessageUdps;
+
+export BTPPL::MessageTcps;
+export BTPPL::MessageTcp;
+
+export BTPPL::MessageUdps;
+export BTPPL::MessageUdp;
+
+on BTPPL::MessageTcp -> event BTPPL::MessageTcpEvt (
+    $conn,
+    $is_orig,
+    self
+);
+
+on BTPPL::MessageUdp -> event BTPPL::MessageUdpEvt (
+    $conn,
+    $is_orig,
+    self
+);

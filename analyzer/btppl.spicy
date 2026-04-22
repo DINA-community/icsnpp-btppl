@@ -1,0 +1,76 @@
+module BTPPL;
+
+import spicy;
+
+import BTPPL_ENUM;
+
+public type MessageTcps = unit {
+    : MessageTcp[];
+};
+
+public type MessageUdps = unit {
+    : MessageUdp[];
+};
+
+public type MessageTcp = unit {
+    # Block length
+    BL           : uint32;
+    # TCP header
+    header       : BTPPL::Header;
+    # Body
+    payload      : bytes&size=self.BL-self.header.HdrLen if(self.BL >= 16);
+    body         : BTPPL::Body(self.payload, self.header.Flags.Sha1, self.BL-self.header.HdrLen-2);
+};
+
+public type MessageUdp = unit {
+    # UDP Header
+    header       : BTPPL::Header;
+    # Body
+    payload      : bytes &eod;
+    body         : BTPPL::Body(self.payload, self.header.Flags.Sha1, |self.payload|-2);
+};
+
+type Header = unit {
+    # Header length
+    HdrLen           : uint8;
+    # Flags: Typ, Version, SHA-1
+    Flags            : bitfield(8) {
+        # Telegram type
+        Type         : 5..7 &convert=BTPPL_ENUM::Type($$);
+        # BTPPL version
+        Version      : 3..4 &convert=BTPPL_ENUM::Version($$);
+        Reserved     : 1..2;
+        # SHA-1
+        Sha1         : 0..0 &convert=BTPPL_ENUM::Sha1($$);
+    };
+    # Job Time
+    JobTime          : uint16;
+    # Sequence number of the job
+    JobTimeCt        : uint16;
+    # Manufacturer identifier
+    Member           : uint16;
+    # Object type
+    OType            : uint16;
+    # Method ID
+    Method           : uint16;
+    # Control center number
+    ZNr              : uint16;
+    # Field device number
+    FNr              : uint16;
+    # Path
+    Path             : bytes&size=self.HdrLen-16;
+};
+
+type Body = unit (payload: bytes, is_sha1 : BTPPL_ENUM::Sha1, length : uint64) {
+    # Parameters
+    Parameters       : bytes &parse-from=payload.sub(0, length) if (length > 0 && (is_sha1 == BTPPL_ENUM::Sha1::without_sha1));
+    ParametersSha1   : bytes &parse-from=payload.sub(0, length-24) if (length > 23 && (is_sha1 == BTPPL_ENUM::Sha1::with_sha1));
+    # UTC (for SHA-1)
+    Utc              : uint32 &parse-from=payload.sub(length-24, length-20) if (is_sha1 == BTPPL_ENUM::Sha1::with_sha1);
+    # SHA-1
+    Sha1             : bytes &parse-from=payload.sub(length-20, length) if (is_sha1 == BTPPL_ENUM::Sha1::with_sha1);
+    # Fletcher checksum
+    Fletcher         : bytes&size=2 &parse-from=payload.sub(length, length+3);
+};
+
+# vim: ai si tabstop=4 shiftwidth=4 softtabstop=4 expandtab colorcolumn=101 syntax=spicy
