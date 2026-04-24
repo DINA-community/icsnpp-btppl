@@ -16,8 +16,7 @@ Protocol specification: <https://www.ocit.org/en/ocit/downloads/> -> ocit-o_prot
 This script is available as a package for [Zeek Package Manger](https://docs.zeek.org/projects/package-manager/en/stable/index.html)
 
 ```bash
-zkg refresh
-zkg install BTPPL_Parsnip
+zkg install https://github.com/DINA-community/icsnpp-btppl
 ```
 
 If ZKG is configured to load packages (see @load packages in quickstart guide), this script will automatically be loaded and ready to go.
