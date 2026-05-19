@@ -1,5 +1,7 @@
 # BTPPL
 
+ ![Status](https://img.shields.io/badge/zeek_8.0.8-passed-green)
+
 ## Overview
 
 BTPPL is a Zeek plugin (written in [Spicy](https://docs.zeek.org/projects/spicy/en/latest/)) for parsing and logging fields used by the BTPPL protocol.
@@ -16,17 +18,16 @@ Protocol specification: <https://www.ocit.org/en/ocit/downloads/> -> ocit-o_prot
 This script is available as a package for [Zeek Package Manger](https://docs.zeek.org/projects/package-manager/en/stable/index.html)
 
 ```bash
-zkg refresh
-zkg install BTPPL_Parsnip
+zkg install https://github.com/DINA-community/icsnpp-btppl
 ```
 
 If ZKG is configured to load packages (see @load packages in quickstart guide), this script will automatically be loaded and ready to go.
 [ZKG Quickstart Guide](https://docs.zeek.org/projects/package-manager/en/stable/quickstart.html)
 
-If users are not using site/local.zeek or another site installation of Zeek and want to run this script on a packet capture, they can add `BTPPL_Parsnip` to the command to run this script on the packet capture from a cloned version of this repository:
+If users are not using site/local.zeek or another site installation of Zeek and want to run this script on a packet capture, they can add `icsnpp-btppl` to the command to run this script on the packet capture from a cloned version of this repository:
 
 ```bash
-zeek -Cr <path_to_pcap> BTPPL_Parsnip
+zeek -Cr <path_to_pcap> icsnpp-btppl
 ```
 
 ### Package Manager (Local Folder)
