@@ -1,6 +1,5 @@
 # BTPPL
 
- ![Status](https://img.shields.io/badge/zeek_8.0.8-passed-green)
 
 ## Overview
 

@@ -4,6 +4,8 @@ description: Testing zeek build with lts version
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 jobs:
